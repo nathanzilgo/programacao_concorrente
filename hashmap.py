@@ -15,7 +15,7 @@ class HashMap:
 
     def put(self, key, value):
         hash = self.hash(key)
-        lock = threading.Lock()
+        lock = threading.Lock(1)
         lock.acquire()
         print(f'Hash: {hash}')
         if self.map[hash] is None:
