@@ -27,7 +27,7 @@ def create(queue: Queue, finished: Queue, max: int):
 
 
 # Consumer
-def consume(work: Queue, finished):
+def consume(work: Queue, finished: Queue):
     counter = 0
     while True:
         if not work.empty():
