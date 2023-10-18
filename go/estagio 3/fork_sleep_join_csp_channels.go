@@ -39,7 +39,7 @@ func main() {
 
 	// Aguarda o sinal de todas as goroutines terminarem
 	for i := 0; i < n; i++ {
-		<-doneCh
+		<- doneCh
 	}
 
 	fmt.Printf("Todas as %d goroutines terminaram\n", n)
